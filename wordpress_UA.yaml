@@ -1,0 +1,31 @@
+#echo "****************************************************************"
+#echo "Installing Wordpress"
+#echo "****************************************************************"
+#if ls $ARTIFACTS_PATH/wordpress*.tar.gz 1> /dev/null 2>&1; then
+#    cp $(find $ARTIFACTS_PATH -name 'wordpress*.tar.gz') ./wordpress.tar.gz >/dev/null
+#else
+#    wget -c http://wordpress.org/latest.tar.gz -O wordpress.tar.gz 
+#fi
+#tar -xzvf wordpress.tar.gz >/dev/null
+#rsync -av wordpress/* /var/www/html/ >/dev/null
+#chown -R www-data:www-data /var/www/html/ >/dev/null
+#chmod -R 755 /var/www/html/ >/dev/null
+#rm /var/www/html/index.html
+
+spec_version: 1
+kind: blueprint
+
+metadata:
+  description: ADOC Under Armor
+
+clouds:
+  - aws: ap-northeast-1
+
+# These are the blueprint parameters and their default values.
+# The values can be changed when creating a sandbox based on this
+# blueprint.
+
+artifacts:
+#  - wordpress: wordpress-5.3.4.tar.gz
+#  - wordpress: wordpress-5.4.2.tar.gz
+#  - wordpress: wordpress-5.5.1.tar.gz
