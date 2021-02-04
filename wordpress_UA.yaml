@@ -26,6 +26,6 @@ clouds:
 # blueprint.
 
 artifacts:
-  - wordpress: wordpress-5.3.4.tar.gz
-#  - wordpress: wordpress-5.4.2.tar.gz
+#  - wordpress: wordpress-5.3.4.tar.gz
+  - wordpress: wordpress-5.4.2.tar.gz
 #  - wordpress: wordpress-5.5.1.tar.gz
